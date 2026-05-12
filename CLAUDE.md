@@ -73,8 +73,7 @@ This repo is a **shell that hosts multiple siloed app versions** under [src/vers
 
 1. `import.meta.glob('./versions/*/meta.ts', { eager: true })` — eagerly imports all `meta.ts` so the homepage can render cards without paying the cost of loading every version's full code.
 2. `import.meta.glob('./versions/*/App.tsx')` — *lazy* glob; the actual `App.tsx` modules are loaded via `React.lazy` only when the user navigates to that version. This is what produces the per-version code-split chunks at build time.
-3. **Hash routing.** `useHashRoute()` reads `window.location.hash`. `#/` shows the homepage; `#/<slug>` mounts that version inside `<VersionFrame>`. No router library, no server config needed for `npm run preview`.
-4. A back-link `← versions` is overlaid on every version (fixed top-left) so versions don't need to know about navigation.
+3. **Hash routing.** `useHashRoute()` reads `window.location.hash`. `#/` shows the homepage; `#/<slug>` mounts that version inside `<VersionFrame>`. No router library, no server config needed for `npm run preview`. To go back to the homepage from inside a version, change the URL hash to `#/` (or use browser back).
 
 ### Adding a new version
 

@@ -137,17 +137,9 @@ function VersionFrame({ slug }: { slug: string }) {
 
   const LazyApp = lazy(entry.load);
   return (
-    <div className="relative">
-      <a
-        href="#/"
-        className="fixed left-3 top-3 z-50 rounded-md border border-border bg-background/80 px-2.5 py-1 text-xs text-muted-foreground backdrop-blur transition-colors hover:text-foreground"
-      >
-        ← versions
-      </a>
-      <Suspense fallback={<div className="p-6 text-sm text-muted-foreground">Loading…</div>}>
-        <LazyApp />
-      </Suspense>
-    </div>
+    <Suspense fallback={<div className="p-6 text-sm text-muted-foreground">Loading…</div>}>
+      <LazyApp />
+    </Suspense>
   );
 }
 
