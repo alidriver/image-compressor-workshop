@@ -5,6 +5,8 @@
 2. Open the Claude Code sidebar by clicking the orange star and sign in. 
 3. The project should run automatically. You'll get a URL for your project in a pop-up. If you don't see it, Click PORTS at the bottom, then click the link by port 5173. 
 
+> **About Claude's permissions in this workshop:** Claude is set to skip the usual "are you sure?" prompts inside the Codespace so you can focus on designing, not approving. This is only safe here because the Codespace is a sandboxed, throwaway machine in the cloud — it can't touch your real files. Don't reuse this setting on your own laptop.
+
 
 ## What's under the hood of our reference prototype?
 
