@@ -23,12 +23,6 @@ If the user is asking how to start, or you can tell from context they haven't ru
 
 The first run does `npm install` first, which can take a minute or two and prints a lot of text — that's normal, not an error.
 
-There is also a pre-flight script that verifies Node/npm before first run:
-- macOS / Linux: `./check-setup.sh`
-- Windows: double-click `check-setup.bat`
-
-The steps above cover the same ground, so the script is optional.
-
 ## Repo map
 
 | Path | What it is |
@@ -39,8 +33,6 @@ The steps above cover the same ground, so the script is optional.
 | [src/components/ui/](src/components/ui/) | Shared shadcn primitives. Versions can import from here. |
 | [src/lib/utils.ts](src/lib/utils.ts) | Shared helpers (`cn` for Tailwind class merging). |
 | [src/CLAUDE.md](src/CLAUDE.md) | Designer-audience rules + scope discipline for code work. |
-| [check-setup.sh](check-setup.sh) | Pre-flight Node/npm/disk check. |
-| [make-zip.sh](make-zip.sh) | Builds a distributable zip one directory up (excludes `node_modules`, `dist`, etc.). |
 | [package.json](package.json), [vite.config.ts](vite.config.ts), [tsconfig.json](tsconfig.json), [eslint.config.js](eslint.config.js), [.npmrc](.npmrc) | Build/tooling config. |
 | [components.json](components.json) | shadcn CLI config. |
 
@@ -54,7 +46,6 @@ The rest of this file is implementation detail Claude needs when doing code work
 
 | Command | What it does |
 |---|---|
-| `./check-setup.sh` | Pre-flight: verifies Node/npm/disk before first run |
 | `npm start` | `npm install` + Vite dev server on http://localhost:5173 |
 | `npm run dev` | Vite dev server (skips install) |
 | `npm run build` | `tsc -b` then `vite build` (type-check is part of the build) |

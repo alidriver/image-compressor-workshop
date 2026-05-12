@@ -14,9 +14,7 @@
         "bradlc.vscode-tailwindcss",
         "csstools.postcss",
         "anthropic.claude-code",
-        "GitHub.copilot-chat",
-        "dsznajder.es7-react-js-snippets",
-        "antfu.vite"
+        "dsznajder.es7-react-js-snippets"
       ],
       "settings": {
         "editor.formatOnSave": true,
@@ -27,6 +25,7 @@
   },
 
   "postCreateCommand": "npm install && npm install -g @anthropic-ai/claude-code && echo '✅ Ready. Run: npm start (or: claude)'",
+  "postAttachCommand": "npm start",
 
   "forwardPorts": [5173, 4173, 3000],
   "portsAttributes": {
